@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font: 62.5px; /* 16px; 1rem = 10px */ 
+    font-family: Helvet;
+}
+body {
+    margin: 0;
+    padding: 0%;
+    height: 100vh;
+}
+
+/* header stays in place*/
+#myHeader {
+    position: sticky;
+    padding: 20px;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /*Ensure the header stays on top of other elements*/
+    transition: background 0.3s ease; /*Smooth color transition*/
+}
+/* Add a shadow when scrolling down*/
+.sticky-header .scrolled {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* End of header stays in place*/
+
+header {
+    grid-area: header;
+    display: flex;
+    position: sticky;
+    align-items: center;
+    justify-content: space-between;
+    background: #203040;
+    padding: 1rem;
+    color: aliceblue;
+    height: 100%;
+}
+header a {
+    text-decoration: none;
+    color: aliceblue;
+    gap: 4%;
+    padding: 0 6px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+header a:hover {
+    color: tomato;
+    text-decoration: underline;
+    text-decoration-color: rgb(95, 177, 209);
+    transition: 0.4s ease-in-out;
+    transition-duration: 200;
+    opacity: 1;
+}
+header a:focus-visible {
+    content: "dashboard";
+    color: seagreen;
+    transition: 0.4s ease-in-out;
+    transition-duration: 100;
+    opacity: 1;
+}
+
+.brand a{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 5rem;  
+    height: 100%;  
+}
+
+footer {
+    background: #203040;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 600;
+    color: red;
+    padding: 2rem;
+}
+
+.foot-link a {
+    text-decoration: none;
+    color: aliceblue; 
+}  
+
+.bone a, img {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.footer a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+/*-------===========Product Section===========-------*/
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0%;
+    margin: 0%;
+    justify-content: center;
+}
+
+.products li {
+    text-decoration: none;
+    flex: 0 1 30rem;
+    margin: 1rem;
+    margin-bottom: 0;
+    height: 42rem;
+    /*border-top: 0.2rem #e0e0e0 solid;*/
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.product-img {
+    max-height: 26rem;
+    max-width: 22rem;
+    margin-top: 3rem;
+}
+
+.product-name a {
+    line-height: 2.2rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+.product-name a:hover {
+    color: tomato;
+}
+
+.product-brand {
+    font-size: 1.5rem;
+    color: #203040;
+}
+
+.product-price {
+    font-size: 2rem;
+}
